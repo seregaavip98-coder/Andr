@@ -1,0 +1,24 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.myarlauncher">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="MyCarLauncher"
+        android:theme="@style/Theme.AppCompat.NoActionBar"> <!-- Убираем верхнюю панель -->
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"> <!-- Только горизонтально -->
+            
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <!-- ЭТИ ДВЕ СТРОКИ ДЕЛАЮТ ЕГО ЛАУНЧЕРОМ -->
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
