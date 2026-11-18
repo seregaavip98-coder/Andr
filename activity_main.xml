@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"> <!-- Темный фон -->
+
+    <!-- Часы и погода сверху -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical">
+
+        <TextClock
+            android:id="@+id/clock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textSize="48sp"
+            android:format12Hour="hh:mm"
+            android:format24Hour="HH:mm" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="23°C ☀️"
+            android:textColor="#AAAAAA"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <!-- Сетка плиток -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/topBar"
+        android:layout_marginBottom="80dp"
+        android:columnCount="3"
+        android:rowCount="2"
+        android:padding="16dp">
+
+        <!-- Плитка 1: Навигация -->
+        <Button
+            android:id="@+id/btnNav"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="8dp"
+            android:backgroundTint="#2C3E50"
+            android:text="Навигация"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <!-- Плитка 2: Музыка -->
+        <Button
+            android:id="@+id/btnMusic"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="8dp"
+            android:backgroundTint="#2980B9"
+            android:text="Музыка"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <!-- Плитка 3: Радио -->
+        <Button
+            android:id="@+id/btnRadio"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="8dp"
+            android:backgroundTint="#8E44AD"
+            android:text="Радио"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <!-- Плитка 4: Телефон -->
+        <Button
+            android:id="@+id/btnPhone"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="8dp"
+            android:backgroundTint="#27AE60"
+            android:text="Телефон"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <!-- Плитка 5: Настройки -->
+        <Button
+            android:id="@+id/btnSettings"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="8dp"
+            android:backgroundTint="#7F8C8D"
+            android:text="Настройки"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <!-- Плитка 6: Все приложения -->
+        <Button
+            android:id="@+id/btnApps"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="8dp"
+            android:backgroundTint="#D35400"
+            android:text="Все приложения"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+    </GridLayout>
+
+    <!-- Нижняя панель (Dock) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="#1E1E1E"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingHorizontal="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="23.5°C  |  A/C  |  MODE  |  AUTO"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</RelativeLayout>
